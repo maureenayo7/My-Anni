@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 Days of Us!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('images/background.jpg');
+            background-size: cover;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+        .top-right, .bottom-left {
+            width: 100%;
+            max-width: 300px;
+            text-align: justify;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .text-with-image {
+            display: flex;
+            align-items:self-start;/* Aligns image and text vertically */
+            margin: 10px 0; /* Add space between the sections */
+        }
+
+        .side-image {
+            width: 100px; /* Adjust width as needed */
+            height: auto;
+            margin: 0px; /* Space between the image and the text */
+        
+       }
+
+       h1 {
+    color: #1a237e;
+    font-size: 21px; /* Adjust this value as needed */
+}
+
+        .slideshow-container, .calendar-container {
+            background-color: rgb(233, 235, 236);
+            border-radius: 6px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            text-align:justify;
+        }
+        .slideshow-image {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .active {
+            display: block;
+        }
+        .calendar {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .calendar th, .calendar td {
+            border: 1px solid #3f3d3d;
+            padding: 5px;
+            text-align:left;
+        }
+        .highlighted {
+            background-color: #f6594a;
+        }
+        .video-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #ff3e2c;
+        }
+        footer {
+            font-size: 16px;
+            color: #080808;
+            text-align: center;
+            margin-top: auto;
+            padding-bottom: 10px;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            background: #fff;
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .modal-content video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border-radius: 10px;
+        }
+        .close-btn {
+            position:relative;
+            top: 0px;
+            left: 300px;
+            font-size: 24px;
+            color: #0c0c0c;
+            cursor: pointer;
+        }
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .calendar-container, .slideshow-container, .top-right, .bottom-left {
+                width: 90%;
+                margin: 10px auto;
+            }
+            .video-section {
+                margin-top: 15px;
+            }
+            .modal-content {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <span style="background-color: rgba(230, 230, 250, 0.4);"><b>Happy One-year Anniversary! 🎉</b></span>
+
+
+    </h1>
+    <div class="content-wrapper">
+        <div class="calendar-container">
+            <h2>October 2023</h2>
+            <table class="calendar">
+                <thead>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+                    <tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+                    <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td class="highlighted">27</td><td>28</td></tr>
+                    <tr><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="text-with-image">
+                <img src="images/chat2.png" alt="Side Image" class="side-image">
+                <div class="top-right">
+                    <p>In just one year, we have turned each other's lives into a beautiful adventure,</p>
+                    <p>Thank you for being my partner in crime and my greatest supporter😘</p>
+                    <p>Here is to many more moments of love and laughter!</p>
+                </div>
+            </div>
+        <div class="slideshow-container">
+            <img class="slideshow-image active" src="images/pic1.jpg" alt="Memory 1">
+            <img class="slideshow-image" src="images/pic2.jpg" alt="Memory 2">
+            <img class="slideshow-image" src="images/pic4.jpg" alt="Memory 4">
+            <img class="slideshow-image" src="images/pic5.jpg" alt="Memory 5">
+            <img class="slideshow-image" src="images/pic6.jpg" alt="Memory 6">
+            <img class="slideshow-image" src="images/pic7.jpg" alt="Memory 7">
+            <img class="slideshow-image" src="images/pic8.jpg" alt="Memory 8">
+            <img class="slideshow-image" src="images/pic9.jpg" alt="Memory 9">
+            <img class="slideshow-image" src="images/pic10.jpg" alt="Memory 10">
+        </div>
+
+        <div class="text-with-image">
+            <div class="bottom-left">
+                <p>It has been a whole 365 days with you and every moment with you is a treasure!🥰</p>
+                <p>I’m so grateful for all the love and memories we've shared this past year</p>
+                <p>I hope this first year is just the beginning of a beautiful journey together.</p>
+            </div>
+            <img src="images/chat2.png" alt="Side Image" class="side-image">
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <button onclick="openModal()">Watch Our Journey</button>
+    </div>
+
+    <!-- Modal for video -->
+    <div id="videoModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <video id="anniversaryVideo" controls>
+                <source src="videos/anniversary_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Love is patient, love is kind, love is not selfish ❤️, Love is you!</p>
+        <p>&copy; 365 Days of Us! 💋 All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slideshow-image');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 2000);
+    
+        function openModal() {
+            const modal = document.getElementById('videoModal');
+            modal.style.display = 'flex';
+            const video = document.getElementById('anniversaryVideo');
+            video.play(); // Autoplay video when modal opens
+        }
+    
+        function closeModal() {
+            const modal = document.getElementById('videoModal');
+            modal.style.display = 'none';
+            const video = document.getElementById('anniversaryVideo');
+            video.pause(); // Stop video playback when modal closes
+        }
+    </script>
+    
